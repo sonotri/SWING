@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CRUD App</title>
+  </head>
+  <body>
+    <h1>🦢SWING Introduction Page🦢</h1>
+    <a href="/add">➡ 여기를 눌러서 자기소개를 작성해주세요!</a>
+    <ul>
+      {% for item in items %}
+      <li>
+        {{ item['name'] }} : {{ item['description'] }}
+        <a href="{{ url_for('edit', item_id=item.id) }}">Edit</a>
+        <a href="{{ url_for('delete', item_id=item['id']) }}">Delete</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

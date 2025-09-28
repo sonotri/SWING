@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>정보 수정</title>
+  </head>
+  <body>
+    <h1>Edit Item</h1>
+    <form method="post">
+      이름(해킹명):
+      <input type="text" name="name" value="{{ item[1] }}" /><br />
+      기수:
+      <input type="text" name="description" value="{{ item[2] }}" /><br />
+      <input type="submit" value="Update" />
+    </form>
+    <a href="/">돌아가기</a>
+  </body>
+</html>
